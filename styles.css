@@ -1,13 +1,38 @@
 body{
     background-color: hsl(222, 26%, 31%);
+    height: 100vh;
+ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 0;
 }
 
 .calculator{
-    margin: 0 auto;
     border: solid 5px wheat;
     height:fit-content;
-    display: block;
     width:fit-content;
 }
 
-
+.grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:10px;
+  }
+  
+  .grid-item{
+    background-color:brown;
+    color:white;
+    font-family:sans-serif;
+    font-size:2rem;
+  }
+  
+  .reset{
+    grid-column-start:1;
+    grid-column-end:3;
+  }
+  .equalTo{
+    grid-column-start:3;
+    grid-column-end:5;
+  }
